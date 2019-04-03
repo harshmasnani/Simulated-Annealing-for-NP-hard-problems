@@ -8,4 +8,4 @@ The code is written to start recognizing the 3-SAT equation from line 11. Links 
 http://archive.dimacs.rutgers.edu/pub/challenge/sat/benchmarks/cnf/
 https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html
 
-For more extensive research, run the code on a supercomputer with annealing scheudule and number of tries as stated in this paper: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.53.9290&rep=rep1&type=pdf
+For more extensive research, run the code on a supercomputer with "MAX_TRIES" variable as stated in this paper: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.53.9290&rep=rep1&type=pdf
