@@ -24,7 +24,7 @@ public class SAT{
 	private static final double e=2.71828;
 	static int MAX_TRIES; static double MAX_TEMP; static double MIN_TEMP;
 	static int i=0; static int tries=0;
-	private static String path="C:\\Users\\Harsh\\Desktop\\TestSuite\\aim-50-2_0-yes1-1.cnf";
+	private static String path="/Users/Sunny/Desktop/aim-50-2_0-yes1-1.cnf";
 	static {getClauses();}
 	
 public static void main(String []args) 
@@ -44,16 +44,16 @@ public static void main(String []args)
 		System.out.println(GSAT(10,100));
 		break;
 	case 2:
-		System.out.println(SASAT(10, 100, 0));
+		System.out.println(SASAT(10, 0.3, 0.01));
 		break;
 	case 3:
-		System.out.println(SASAT0(1000, 100, 0));
+		System.out.println(SASAT0(10, 0.3, 0.01));
 		break;
 	case 4:
-		System.out.println(SASATR(1000,100,0));
+		System.out.println(SASATR(10, 0.3, 0.01));
 		break;
 	case 5:	
-		System.out.println(RGSAT(100,1000));
+		System.out.println(RGSAT(10,100));
 		break;
 	default:
 		System.out.println("Invalid Selection");
