@@ -63,7 +63,17 @@ public static void main(String []args)
 	System.out.println();
 }
 
-//GSAT
+/*GSAT inputs results
+ * 
+ *MAX_FLIPS=10,000
+ *MAX_TRIES>9,958
+ *
+ *Results averaged over 100 random instances of 500 variables and 2152 clauses(4.25C)
+ *δ=253,929,000
+ *FLips=9,958,000
+ *
+ *satisfied instances=20%
+ */
 public static String GSAT(int MAX_FLIPS, int MAX_TRIES) 
 {
 	for(tries=0; tries<MAX_TRIES; tries++)
@@ -91,7 +101,18 @@ public static String GSAT(int MAX_FLIPS, int MAX_TRIES)
 	return("FLips=" + Flips);
 }
 
-//SASAT
+/*SASAT input and results
+ * 
+ *MAX_TRIES=1,600,000
+ *MAX_TEMP=0.3
+ *MIN_TEMP=0.01
+ *
+ *Results averaged over 100 random instances of 500 variables and 2152 clauses(4.25C)
+ *δ=86,680,500
+ *Flips=4,438,820
+ *
+ *satisfied instances=41%
+ */
 public static String SASAT(int MAX_TRIES, double MAX_TEMP, double MIN_TEMP)
 {
 	while(tries<=MAX_TRIES)
@@ -126,7 +147,18 @@ public static String SASAT(int MAX_TRIES, double MAX_TEMP, double MIN_TEMP)
 	return("FLips=" + Flips);
 }
 
-//0-SASAT
+/*0-SASAT input and results
+ * 
+ *MAX_TRIES=1,600,000
+ *MAX_TEMP=0.3
+ *MIN_TEMP=0.01
+ *
+ *Results averaged over 100 random instances of 500 variables and 2152 clauses(4.25C)
+ *δ=246,889,500
+ *Flips=11,019,800
+ *
+ *satisfied instances=23% 
+ */
 public static String SASAT0(int MAX_TRIES, double MAX_TEMP, double MIN_TEMP)
 {
 	String T;
@@ -162,7 +194,18 @@ public static String SASAT0(int MAX_TRIES, double MAX_TEMP, double MIN_TEMP)
 	return("FLips=" + Flips);
 }
 
-//R-SASAT
+/*R-SASAT
+ *
+ *MAX_TRIES=1,600,000
+ *MAX_TEMP=0.3
+ *MIN_TEMP=0.01
+ *
+ *Results averaged over 100 random instances of 500 variables and 2152 clauses(4.25C)
+ *δ=99,556,000
+ *Flips=6,016,920
+ *
+ *satisfied instances=46%  
+ */
 public static String SASATR(int MAX_TRIES, double MAX_TEMP, double MIN_TEMP) 
 {
 	double Pin=1/V;
@@ -209,7 +252,9 @@ public static String SASATR(int MAX_TRIES, double MAX_TEMP, double MIN_TEMP)
 	return("FLips=" + Flips);
 }
 
-//RGSAT
+/*RGSAT
+ * just gsat with random walks
+ */
 public static String RGSAT(int MAX_FLIPS, int MAX_TRIES)
 {
 	for(tries=0; tries<MAX_TRIES; tries++)
